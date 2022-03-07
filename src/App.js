@@ -201,6 +201,9 @@ function App() {
             handleChange={handleChange}
           />
         </Route>
+        {/* <Route path="/checkout">
+          <Checkout />
+        </Route> */}
       </Switch>
     </BrowserRouter>
   );

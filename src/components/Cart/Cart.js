@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import ShoppingCartItem from "../ShoppingCartItem";
 import Button from "../Button";
@@ -49,7 +50,14 @@ function Cart({ cartItems, handleRemove, handleChange, ...props }) {
               <hr />
             </div>
             <div className="col">
-              <Button disabled={cartItems.length === 0}>Checkout</Button>
+              <Link
+                exact
+                activeClassName="active"
+                className="navbar-brand"
+                to="/carapolla"
+              >
+                <Button disabled={cartItems.length === 0}>Checkout</Button>
+              </Link>
             </div>
           </div>
         </div>
